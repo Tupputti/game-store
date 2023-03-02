@@ -14,7 +14,7 @@ export default function Header({ isOpened, toggleDrawer }: HeaderProps) {
       <Grid container spacing={2}>
         <Grid item xs={6}>
           <LogoContainer>
-            <img height={70} src="/image/Logo.png" alt="image" />
+            {/* <img height={70} src="/image/Logo.png" alt="image" /> */}
           </LogoContainer>
         </Grid>
         <Grid item xs={6}>

@@ -24,22 +24,22 @@ export default function Header({ isOpened, toggleDrawer }: HeaderProps) {
           <ProfileContainer>
             {session && (
               <>
-                {session?.user?.email}&nbsp;
-                <Button
-                  sx={{ position: "revert", background: "#1f1d33" }}
-                  size="small"
-                  onClick={() => signOut()}
-                >
-                  Sign out
-                </Button>
+                <a onClick={() => signOut()}>
+                  <h2>{session?.user?.email}</h2>
+                </a>
               </>
             )}
             {!session && (
               <>
                 <Button
-                  sx={{ position: "revert", background: "#1f1d33" }}
+                  sx={{ position: "revert", background: "#ffffff" }}
                   size="small"
-                  onClick={() => signIn()}
+                  onClick={() =>
+                    signIn("credentials", {
+                      username: "jsmith",
+                      password: "1234",
+                    })
+                  }
                 >
                   Sign in
                 </Button>

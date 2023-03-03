@@ -335,14 +335,17 @@ const Home: NextPage = () => {
           }}
           inputProps={{ "aria-label": "search game" }}
         />
-        <IconButton
-          type="button"
-          sx={{ p: "10px" }}
-          aria-label="search"
-          onClick={handleSearchReset}
-        >
-          <RefreshIcon />
-        </IconButton>
+        {value && (
+          <IconButton
+            type="button"
+            sx={{ p: "10px" }}
+            aria-label="search"
+            onClick={handleSearchReset}
+          >
+            <RefreshIcon />
+          </IconButton>
+        )}
+
         <IconButton
           type="button"
           sx={{ p: "10px" }}

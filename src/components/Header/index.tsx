@@ -1,6 +1,6 @@
 import { HeaderContainer, LogoContainer, ProfileContainer } from "./styles";
 import { useSession, signIn, signOut } from "next-auth/react";
-import { Button, Grid } from "@mui/material";
+import { Button, Grid, Link } from "@mui/material";
 
 type HeaderProps = {
   isOpened: boolean;
@@ -14,6 +14,9 @@ export default function Header({ isOpened, toggleDrawer }: HeaderProps) {
       <Grid container spacing={2}>
         <Grid item xs={6}>
           <LogoContainer>
+            <Link href="/">
+              <h1>GAMESTORE</h1>
+            </Link>
             {/* <img height={70} src="/image/Logo.png" alt="image" /> */}
           </LogoContainer>
         </Grid>

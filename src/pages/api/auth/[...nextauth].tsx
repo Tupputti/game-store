@@ -10,13 +10,13 @@ export const authOptions = {
         password: { label: "Password", type: "password" },
       },
       async authorize(credentials, req) {
-        const res = await fetch("http://localhost:3005/login");
-        const data = await res.json();
+        const user = { id: "1", name: "J Smith", email: "jsmith@example.com" };
 
-        if (data.status == "ok") {
-          return data.user;
+        if (user) {
+          return user;
+        } else {
+          return null;
         }
-        return null;
       },
     }),
   ],
